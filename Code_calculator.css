@@ -1,0 +1,162 @@
+/*Styling for the website*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(255, 240, 245);
+    
+}
+.calculator-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator-wrapper h1{
+    position: absolute;
+    left: -150px;
+    top: 50%;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    white-space: nowrap;
+    color: rgb(201, 79, 124);
+
+    font-family: Arial, sans-serif;
+}
+#calculator-container{
+    font-family: Arial, sans-serif;
+    background-color: rgb(248, 221, 232);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(184, 61, 110, 0.18);
+}
+#display{
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem; 
+    text-align: left;
+    border: none;
+    background-color: rgb(255, 250, 252);
+    color: rgb(84, 38, 59);
+    
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    padding: 25px;
+}
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(244, 191, 208);
+    color: #000;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgba(244, 191, 208, 40%);
+}
+button:active{
+    background-color: rgba(244, 191, 208, 50%);
+}
+.operator-btn{
+    background-color: rgb(215, 108, 151);
+}
+.equal-to-button{
+    background-color: rgb(201, 79, 124);
+}
+.equal-to-button:hover{
+    background-color: rgba(201, 79, 124, 40%);
+}
+.equal-to-button:active{
+    background-color: rgba(201, 79, 124, 50%);
+}
+.operator-btn:hover{
+    background-color: rgba(215, 108, 151, 65%);
+}
+.operator-btn:active{
+    background-color: rgba(215, 108, 151, 75%);
+}
+
+
+
+
+/* Responsive Design for Tablets and Mobile Phones */
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .calculator-wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .calculator-wrapper h1 {
+        position: static;
+        transform: none;
+        text-align: center;
+        white-space: normal;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    #calculator-container {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #display {
+        font-size: 3rem;
+        padding: 15px;
+        min-width: 0;
+    }
+
+    #keys {
+        gap: 8px;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        font-size: 2rem;
+    }
+}
+
+/* Extra Small Mobile Phones */
+@media screen and (max-width: 350px) {
+
+    .calculator-wrapper h1 {
+        font-size: 20px;
+    }
+
+    #display {
+        font-size: 2.2rem;
+        padding: 10px;
+    }
+
+    #keys {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+}
